@@ -13,6 +13,12 @@
 </head>
 <body>
   <div id="root"></div>
+  <script>
+    if (sessionStorage.redirect) {
+      history.replaceState(null, null, sessionStorage.redirect);
+      delete sessionStorage.redirect;
+    }
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
